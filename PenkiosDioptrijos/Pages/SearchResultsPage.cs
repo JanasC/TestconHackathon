@@ -16,6 +16,10 @@ namespace Test
         public By ShipToLithuaniaCheckBox = By.XPath("//span[text()='Ship to Lithuania']/../../input");
         public By FreeShippingByAmazonCheckBox = By.XPath("//span[text()='Free Shipping by Amazon']/../../input");
         public By FourStarsAndUpButton = By.XPath("//span[contains(.,'4 Stars & Up')]");
+        public By IncludeOutofStock = By.XPath("//span[text()='Include Out of Stock']/../../input");
+        
+
+
 
 
 
