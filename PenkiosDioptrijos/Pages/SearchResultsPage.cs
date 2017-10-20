@@ -21,5 +21,7 @@ namespace Test
         public By FreeShippingByAmazonCheckBox = By.XPath("//span[text()='Free Shipping by Amazon']");
         public By FourStarsAndUpButton = By.XPath("//span[contains(.,'4 Stars & Up')]");
         public By IncludeOutofStock = By.XPath("//span[text()='Include Out of Stock']");
+
+        public By PlaystationSelectionSelector = By.CssSelector("h2.a-size-medium.s-inline.s-access-title.a-text-normal");
     }
 }
