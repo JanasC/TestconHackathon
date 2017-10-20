@@ -57,14 +57,15 @@ namespace Test
             _productPage.AddToCart();
         }
 
-        //[Test, Order(4)]
-        //public void PlaceOrderPlayStation4()
-        //{
-            //_basketPage.ProceedToCheckout();
-            //_basketPage.CancelOfferPopUp();
-            //_basketPage.DeliverToThisAdress();
-            //Thread.Sleep(9000);
-        //}
+        [Test, Order(4)]
+        public void PlaceOrder()
+        {
+            Thread.Sleep(5000);
+            driver.Navigate().Refresh();
+            _basketPage.ProceedToCheckout();
+            _basketPage.CancelOfferPopUp();
+            _basketPage.DeliverToThisAdress();
+        }
 
         [OneTimeTearDown]
         public void Clean()
