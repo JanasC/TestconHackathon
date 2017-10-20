@@ -1,6 +1,9 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using System.Drawing.Imaging;
+using System.IO;
+using static Test.TestLogger;
 using OpenQA.Selenium.Firefox;
 using System.Configuration;
 
@@ -19,6 +22,22 @@ namespace PenkiosDioptrijos
             return Driver;
         }
 
+
+        private void CreateIfMissing(string path)
+        {
+            bool folderExists = Directory.Exists(path);
+            if (!folderExists)
+                Directory.CreateDirectory(path);
+        }
+        public void TakeScreenShot()
+        {
+            string currentDate = DateTime.Now.ToString("ddd, ddMMMyyyy HHmm");
+            ITakesScreenshot screenshotHandler = Driver as ITakesScreenshot;
+            Screenshot screenshot = screenshotHandler.GetScreenshot();
+            string dir = @"C:\TestResults\";
+            screenshot.SaveAsFile(dir + currentDate + "Screenshot" + ".png", ScreenshotImageFormat.Png);
+        }
+       
         public IWebDriver GetNewDriverInstance()
         {
             
@@ -27,7 +46,7 @@ namespace PenkiosDioptrijos
             {
                 case "Firefox":
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
-                    service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+                    service.FirefoxBinaryPath = ConfigurationManager.AppSettings["FireFoxBinary"];
                     Driver = new FirefoxDriver(service);
                     break;
                 case "Chrome":
@@ -41,6 +60,8 @@ namespace PenkiosDioptrijos
 
         public void CleanUp()
         {
+            TakeScreenShot();
+            LogMessage("Terminating Driver");
             Driver.Quit();
         }
     }
