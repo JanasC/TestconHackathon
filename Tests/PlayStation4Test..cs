@@ -36,6 +36,7 @@ namespace Test
         public void SearchForPlayStation4()
         {
             _mainPage.EnterSearch("PlayStation 4 pro console");
+            _mainPage.RunSearch();
             _clickElementHelper.ClickElement(_searchResultsPage.Playstation4ConsoleSelector);
             _clickElementHelper.ClickElement(_searchResultsPage.FourStarsAndUpButton);
             _clickElementHelper.ClickElement(_searchResultsPage.FreeShippingByAmazonCheckBox);
