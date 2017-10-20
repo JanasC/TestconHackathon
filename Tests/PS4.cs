@@ -20,6 +20,9 @@ namespace Tests
          *  
          *  Sort:
          *  1) By price - 'low to high'
+         *  
+         *  Select item which have Amazon`s Choice
+         *  //span[@class='a-badge-text' and contains(text(),'Amazon')]
          */
 
     }
