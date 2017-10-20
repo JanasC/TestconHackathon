@@ -18,5 +18,6 @@ namespace Test
             Driver.FindElement(AddToCartButtonSelector).Click();
             Driver.FindElement(ContinueToCartButtonSelector).Click();
         }
+
     }
 }

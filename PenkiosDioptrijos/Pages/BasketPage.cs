@@ -1,15 +1,20 @@
-﻿using NUnit.Framework;
-using PenkiosDioptrijos;
-using OpenQA.Selenium;
-using System.Threading;
-using System;
+﻿using OpenQA.Selenium;
 
 namespace Test
 {
     public class BasketPage
     {
-        public By SearchBarSelector = By.CssSelector("input.twotabsearchtextbox");
-        private IWebDriver driver;
+        private IWebDriver Driver;
+        public BasketPage(IWebDriver driver)
+        {
+            Driver = driver;
+        }
 
+        public By ProceedToCheckoutButtonSelector = By.CssSelector("input.a-button-input[name=proceedToCheckout]");
+
+        public void ProceedToCheckout()
+        {
+            Driver.FindElement(ProceedToCheckoutButtonSelector).Click();
+        }
     }
 }
