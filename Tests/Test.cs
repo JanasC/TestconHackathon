@@ -11,12 +11,14 @@ namespace Test
     {
         private TestBase testBase = new TestBase();
         private IWebDriver driver;
-        
+        private MainPage _mainPage;
+
         [SetUp]
         public void TestInitialize()
         {
             driver = testBase.GetDriverInstance();
             Console.WriteLine("Instance opened...");
+            _mainPage = new MainPage(driver);
         }
 
         [Test]

@@ -8,8 +8,20 @@ namespace Test
 {
     public class MainPage
     {
-        public By SearchBarSelector = By.CssSelector("input.twotabsearchtextbox");
-        private IWebDriver driver;
+        private IWebDriver Driver;
+        public MainPage(IWebDriver driver)
+        {
+            Driver = driver;
+        }
+
+        public By SearchFieldSelector = By.CssSelector("input.twotabsearchtextbox");
+        public By SearchDropdownBoxSelector = By.CssSelector("select#searchDropdownBox");
+        public By SearchButtonSelector = By.CssSelector("div.nav-right input");
+
+        public void EnterSearch(string searchText)
+        {
+            Driver.FindElement(SearchFieldSelector).SendKeys(searchText);
+        }
         
     }
 }
