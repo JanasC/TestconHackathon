@@ -13,6 +13,7 @@ namespace Test
         private IWebDriver driver;
         private MainPage _mainPage;
         private LoginPage _loginPage;
+        private SearchResultsPage _searchResultsPage;
 
         [SetUp]
         public void TestInitialize()
@@ -21,6 +22,7 @@ namespace Test
             Console.WriteLine("Instance opened...");
             _mainPage = new MainPage(driver);
             _loginPage = new LoginPage(driver);
+            _searchResultsPage = new SearchResultsPage(driver);
         }
 
         [Test]
@@ -32,10 +34,17 @@ namespace Test
             inputElement.Submit();
             Thread.Sleep(5000);
         }
+
         [Test]
-        public void LoginPage()
+        public void LoginToAmazonPage()
         {
             _loginPage.LoginToAmazon();
+        }
+
+        [Test]
+        public void SearchForPlayStation4()
+        {
+            _mainPage.EnterSearch("PlayStation 4 pro console");
         }
 
         [TearDown]

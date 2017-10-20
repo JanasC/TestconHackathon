@@ -1,8 +1,4 @@
-﻿using NUnit.Framework;
-using PenkiosDioptrijos;
-using OpenQA.Selenium;
-using System.Threading;
-using System;
+﻿using OpenQA.Selenium;
 
 namespace Test
 {
@@ -16,6 +12,7 @@ namespace Test
 
         public By SearchBarSelector = By.CssSelector("input.twotabsearchtextbox");
         public By Playstation4ConsoleSelector = By.LinkText("a-link-normal s-ref-text-link");
+
 
     }
 }
