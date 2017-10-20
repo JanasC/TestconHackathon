@@ -12,7 +12,7 @@ namespace Test
 
         public By AddToCartButtonSelector = By.CssSelector("div.nav-right input");
         public By ContinueToCartButtonSelector = By.CssSelector("form#smartShelfFormContinue input#smartShelfAddToCartNative");
-        public By ProceedToCheckoutButtonSelector = By.CssSelector("input.a-button-input[name=proceedToCheckout]"
+        public By ProceedToCheckoutButtonSelector = By.CssSelector("input.a-button-input[name=proceedToCheckout]");
         
         public void AddToCart()
         {
