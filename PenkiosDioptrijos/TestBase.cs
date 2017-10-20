@@ -14,7 +14,7 @@ namespace PenkiosDioptrijos
         {
             Driver = GetNewDriverInstance();
             Driver.Manage().Window.Maximize();
-            Driver.Navigate().GoToUrl("https://www.amazon.com/account");
+            Driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["DefaultURL"]);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
             return Driver;
         }

@@ -55,7 +55,6 @@
   <ItemGroup>
     <None Include="chromedriver" />
     <None Include="packages.config" />
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="chromedriver.exe">
