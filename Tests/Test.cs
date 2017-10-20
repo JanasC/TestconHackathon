@@ -32,11 +32,25 @@ namespace Test
         }
 
         [Test]
+        [Ignore("For now")]
         public void SearchForPlayStation4()
         {
             _mainPage.EnterSearch("PlayStation 4 pro console");
             _searchResultsPage.AddFiltersForPS4();
         }
+
+        [Test]
+        [Ignore("For now")]
+        public void AddToBasketPlayStation4()
+        {
+        }
+
+        [Test]
+        [Ignore("For now")]
+        public void PlaceOrderPlayStation4()
+        {
+        }
+
 
         [TearDown]
         public void Clean()
