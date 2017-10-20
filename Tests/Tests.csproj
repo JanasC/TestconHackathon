@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Camera.cs" />
+    <Compile Include="JustDance2018.cs" />
     <Compile Include="PS4.cs" />
     <Compile Include="Test.cs" />
   </ItemGroup>
