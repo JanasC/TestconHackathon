@@ -38,6 +38,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PS4.cs" />
     <Compile Include="Test.cs" />
   </ItemGroup>
   <ItemGroup>

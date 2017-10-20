@@ -13,6 +13,5 @@ namespace Test
         public By SearchBarSelector = By.CssSelector("input.twotabsearchtextbox");
         public By Playstation4ConsoleSelector = By.LinkText("a-link-normal s-ref-text-link");
 
-
     }
 }
