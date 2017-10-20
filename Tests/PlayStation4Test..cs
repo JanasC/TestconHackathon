@@ -46,6 +46,7 @@ namespace Test
         }
 
         [Test, Order(2)]
+
         public void SelectPlayStation4()
         {
             _clickElementHelper.ClickElement(_searchResultsPage.PlaystationSelectionSelector);
@@ -53,12 +54,15 @@ namespace Test
 
 
         [Test, Order(3)]
+
         public void AddToBasketPlayStation4()
         {
             _productPage.AddToCart();
         }
 
+
         [Test, Order(4)]
+
         public void PlaceOrderPlayStation4()
         {
             _basketPage.ProceedToCheckout();

@@ -12,7 +12,7 @@ namespace PenkiosDioptrijos
         {
             Driver.Manage().Window.Maximize();
             Driver.Navigate().GoToUrl("https://www.amazon.com/account");
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
             return Driver;
         }
 
