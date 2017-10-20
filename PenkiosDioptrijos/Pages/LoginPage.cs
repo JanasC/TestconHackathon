@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using PenkiosDioptrijos.Helpers;
+using System.Configuration;
 using static Test.TestLogger;
 
 namespace Test
@@ -20,8 +21,8 @@ namespace Test
 
         public void LoginToAmazon()
         {
-            string LoginNameValue = "5dhackaton2@gmail.com";
-            string PasswordValue = "Q!w2e3r4zxc";
+            string LoginNameValue = ConfigurationManager.AppSettings["UserName"];
+            string PasswordValue = ConfigurationManager.AppSettings["Password"];
             var Loginname = Driver.FindElement(LoginNameSelector);
             var Password = Driver.FindElement(PasswordSelector);
             Loginname.SendKeys(LoginNameValue);
