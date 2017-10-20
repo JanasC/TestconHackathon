@@ -11,7 +11,7 @@ namespace Test
     public class UnitTests
     {
         private TestBase testBase = new TestBase();
-        private Click
+        private ClickElementHelper _clickElementHelper;
         private IWebDriver driver;
         private MainPage _mainPage;
         private LoginPage _loginPage;
@@ -39,7 +39,6 @@ namespace Test
         public void SearchForPlayStation4()
         {
             _mainPage.EnterSearch("PlayStation 4 pro console");
-            _searchResultsPage.ClickELement();
 
         }
 

@@ -3,10 +3,10 @@ using OpenQA.Selenium;
 
 namespace PenkiosDioptrijos.Helpers
 {
-    public class ClickElement
+    public class ClickElementHelper
     {
         private IWebDriver Driver;
-        public ClickElement(IWebDriver driver)
+        public ClickElementHelper(IWebDriver driver)
         {
             Driver = driver;
         }
