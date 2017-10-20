@@ -38,10 +38,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Camera.cs" />
-    <Compile Include="JustDance2018.cs" />
-    <Compile Include="PS4.cs" />
+    <Compile Include="PlayStation4JustDance2018Test.cs" />
     <Compile Include="PlayStation4Test..cs" />
+    <Compile Include="PlayStation4CameraTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
