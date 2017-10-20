@@ -48,7 +48,7 @@ namespace Test
         [Test, Order(2)]
         public void SelectPlayStation4()
         {
-            _clickElementHelper.ClickElement(_searchResultsPage.SelectFirstProductInTheListSelector);
+            _clickElementHelper.ClickElement(_searchResultsPage.SelectPlaystation4Selector);
         }
 
         [Test, Order(3)]
@@ -57,14 +57,14 @@ namespace Test
             _productPage.AddToCart();
         }
 
-        [Test, Order(4)]
-        public void PlaceOrderPlayStation4()
-        {
-            _basketPage.ProceedToCheckout();
-            _basketPage.CancelOfferPopUp();
+        //[Test, Order(4)]
+        //public void PlaceOrderPlayStation4()
+        //{
+            //_basketPage.ProceedToCheckout();
+            //_basketPage.CancelOfferPopUp();
             //_basketPage.DeliverToThisAdress();
-            Thread.Sleep(9000);
-        }
+            //Thread.Sleep(9000);
+        //}
 
         [OneTimeTearDown]
         public void Clean()
