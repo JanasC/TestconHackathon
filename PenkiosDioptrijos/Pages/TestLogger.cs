@@ -8,12 +8,12 @@ using NUnit;
 
 namespace Test
 {
-    public class TestLogger
+    public static class TestLogger
     {
-        public void LogMessage(string Message)
+        public static void LogMessage(string Message)
         {
             String TimeStamp = DateTime.Now.ToString("u");
-            TestContext.Write(TimeStamp + ": - " + Message);
+            TestContext.Write(TimeStamp + ": - " + Message+ "\r\n");
 
 
         }

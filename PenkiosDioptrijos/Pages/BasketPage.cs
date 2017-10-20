@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using PenkiosDioptrijos.Helpers;
 using System;
+using static Test.TestLogger;
 
 namespace Test
 {
@@ -33,7 +34,7 @@ namespace Test
             }
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Offer not shown");
+                LogMessage("Offer not shown");
             }
         }
 

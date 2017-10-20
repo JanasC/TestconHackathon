@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System.Threading;
+using Test;
+using static Test.TestLogger;
 
 namespace PenkiosDioptrijos.Helpers
 {
@@ -7,6 +9,7 @@ namespace PenkiosDioptrijos.Helpers
     {
         private IWebDriver Driver;
         public ClickElementHelper(IWebDriver driver)
+
         {
             Driver = driver;
         }
@@ -14,6 +17,7 @@ namespace PenkiosDioptrijos.Helpers
         public void ClickElement(By by)
         {
             Thread.Sleep(1500);
+            LogMessage("Clicking Element: "+ by);
             Driver.FindElement(by).Click();
         }
     }
