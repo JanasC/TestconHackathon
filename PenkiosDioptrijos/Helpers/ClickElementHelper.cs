@@ -1,12 +1,12 @@
 ﻿using OpenQA.Selenium;
 using Test;
+using static Test.TestLogger;
 
 namespace PenkiosDioptrijos.Helpers
 {
     public class ClickElementHelper
     {
         private IWebDriver Driver;
-        private TestLogger _testLogger;
         public ClickElementHelper(IWebDriver driver)
 
         {
@@ -15,8 +15,7 @@ namespace PenkiosDioptrijos.Helpers
 
         public void ClickElement(By by)
         {
-            _testLogger = new TestLogger();
-            _testLogger.LogMessage("Clicking Element: "+ by);
+            LogMessage("Clicking Element: "+ by);
             Driver.FindElement(by).Click();
         }
     }

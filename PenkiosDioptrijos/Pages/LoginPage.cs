@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using PenkiosDioptrijos.Helpers;
+using static Test.TestLogger;
 
 namespace Test
 {
@@ -7,13 +8,11 @@ namespace Test
     {
         private IWebDriver Driver;
         private ClickElementHelper _clickElementHelper;
-        private TestLogger _testLogger;
 
         public LoginPage(IWebDriver driver)
         {
             Driver = driver;
             _clickElementHelper = new ClickElementHelper(driver);
-            _testLogger = new TestLogger();
         }
 
         public By LoginNameSelector = By.CssSelector("input#ap_email");
@@ -28,7 +27,7 @@ namespace Test
             Loginname.SendKeys(LoginNameValue);
             Password.SendKeys(PasswordValue);
             Password.Submit();
-            _testLogger.LogMessage("Attempting login with: - User: " + LoginNameValue + " Password: " + PasswordValue);
+            LogMessage("Attempting login with: - User: " + LoginNameValue + " Password: " + PasswordValue);
         }
         
     }
