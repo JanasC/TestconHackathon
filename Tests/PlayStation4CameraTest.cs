@@ -34,7 +34,7 @@ namespace Test
         private ProductPage _productPage;
         private BasketPage _basketPage;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void TestInitialize()
         {
             driver = testBase.GetDriverInstance();
@@ -73,7 +73,7 @@ namespace Test
         }
 
 
-        [TearDown]
+        [OneTimeTearDown]
         public void Clean()
         {
             testBase.CleanUp();

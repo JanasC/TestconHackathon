@@ -14,7 +14,7 @@ namespace Test
             _clickElementHelper = new ClickElementHelper(driver);
         }
 
-        public By AddToCartButtonSelector = By.CssSelector("div.nav-right input");
+        public By AddToCartButtonSelector = By.CssSelector("input#add-to-cart-button.a-button-input");
         public By ContinueToCartButtonSelector = By.CssSelector("form#smartShelfFormContinue input#smartShelfAddToCartNative");
 
         public void AddToCart()
