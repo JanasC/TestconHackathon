@@ -18,6 +18,7 @@ namespace Test
         public By ProceedToCheckoutButtonSelector = By.CssSelector("input.a-button-input[name=proceedToCheckout]");
         public By PopUpHeaderTitleSelector = By.CssSelector("h4.a-popover-header-content");
         public By NoThanksButtonSelector = By.CssSelector("button#siNoCoverage-announce");
+        public By DeliverToThisAdressSelector = By.XPath("//span/a[text()[contains(.,'Deliver to this address')]]");
 
         public void ProceedToCheckout()
         {
@@ -34,6 +35,11 @@ namespace Test
             {
                 Console.WriteLine("Offer not shown");
             }
+        }
+
+        public void DeliverToThisAdress()
+        {
+            _clickElementHelper.ClickElement(DeliverToThisAdressSelector);
         }
     }
 }
