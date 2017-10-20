@@ -32,10 +32,18 @@ namespace Test
             inputElement.Submit();
             Thread.Sleep(5000);
         }
+
         [Test]
-        public void LoginPage()
+        public void LoginToAmazonPage()
         {
             _loginPage.LoginToAmazon();
+        }
+
+        [Test]
+        public void SearchForPlayStation4()
+        {
+
+            _mainPage.EnterSearch("PlayStation 4 pro console");
         }
 
         [TearDown]
