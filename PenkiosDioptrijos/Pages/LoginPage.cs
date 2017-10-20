@@ -21,9 +21,8 @@ namespace Test
         {
             var Loginname = Driver.FindElement(LoginNameSelector);
             var Password = Driver.FindElement(PasswordSelector);
-            Console.WriteLine("Finding elements...");
-            Loginname.SendKeys("5dhackaton@gmail.com");
-            Password.SendKeys("Q!w2e3r4123");
+            Loginname.SendKeys("5dhackaton2@gmail.com");
+            Password.SendKeys("Q!w2e3r4zxc");
             Password.Submit();
         }
         

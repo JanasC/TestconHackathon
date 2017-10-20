@@ -36,10 +36,10 @@ namespace Test
         public void SearchForPlayStation4()
         {
             _mainPage.EnterSearch("PlayStation 4 pro console");
-            _clickElementHelper.ClickELement(_searchResultsPage.Playstation4ConsoleSelector);
-            _clickElementHelper.ClickELement(_searchResultsPage.FourStarsAndUpButton);
-            _clickElementHelper.ClickELement(_searchResultsPage.FreeShippingByAmazonCheckBox);
-            _clickElementHelper.ClickELement(_searchResultsPage.IncludeOutofStock);
+            _clickElementHelper.ClickElement(_searchResultsPage.Playstation4ConsoleSelector);
+            _clickElementHelper.ClickElement(_searchResultsPage.FourStarsAndUpButton);
+            _clickElementHelper.ClickElement(_searchResultsPage.FreeShippingByAmazonCheckBox);
+            _clickElementHelper.ClickElement(_searchResultsPage.IncludeOutofStock);
         }
 
         [Test]

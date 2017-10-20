@@ -10,7 +10,7 @@ namespace PenkiosDioptrijos.Helpers
             Driver = driver;
         }
 
-        public void ClickELement(By by)
+        public void ClickElement(By by)
         {
             Driver.FindElement(by).Click();
         }
