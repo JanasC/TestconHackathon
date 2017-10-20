@@ -28,6 +28,7 @@ namespace Test
             _searchResultsPage = new SearchResultsPage(driver);
             _productPage = new ProductPage(driver);
             _basketPage = new BasketPage(driver);
+            _clickElementHelper = new ClickElementHelper(driver);
 
             _loginPage.LoginToAmazon();
         }
