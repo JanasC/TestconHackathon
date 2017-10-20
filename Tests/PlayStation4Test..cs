@@ -46,14 +46,12 @@ namespace Test
         }
 
         [Test, Order(2)]
-        [Ignore("For now")]
         public void AddToBasketPlayStation4()
         {
             _productPage.AddToCart();
         }
 
         [Test, Order(3)]
-        [Ignore("For now")]
         public void PlaceOrderPlayStation4()
         {
             _basketPage.ProceedToCheckout();

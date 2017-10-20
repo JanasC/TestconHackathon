@@ -18,6 +18,7 @@ namespace Test
         public By SearchFieldSelector = By.Id("twotabsearchtextbox");
         public By SearchDropdownBoxSelector = By.CssSelector("select#searchDropdownBox");
         public By SearchButtonSelector = By.CssSelector("div.nav-right input");
+        public By ShowFiltersButtonSelector = By.CssSelector("span.s-top-nav-all-filter-expand-text");
 
         public void SelectCategory(string category)
         {
@@ -33,6 +34,15 @@ namespace Test
         public void RunSearch()
         {
             _clickElementHelper.ClickElement(SearchButtonSelector);
+            try
+            {
+                _clickElementHelper.ClickElement(ShowFiltersButtonSelector);
+            }
+            catch
+            {
+
+            }
+
         }
 
         public void ExecuteSearch(string category, string searchText)
