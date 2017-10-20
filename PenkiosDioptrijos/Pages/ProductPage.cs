@@ -1,13 +1,17 @@
 ﻿using OpenQA.Selenium;
+using PenkiosDioptrijos.Helpers;
 
 namespace Test
 {
     public class ProductPage
     {
         private IWebDriver Driver;
+        private ClickElementHelper _clickElementHelper;
+
         public ProductPage(IWebDriver driver)
         {
             Driver = driver;
+            _clickElementHelper = new ClickElementHelper(driver);
         }
 
         public By AddToCartButtonSelector = By.CssSelector("div.nav-right input");
@@ -15,8 +19,8 @@ namespace Test
 
         public void AddToCart()
         {
-            Driver.FindElement(AddToCartButtonSelector).Click();
-            Driver.FindElement(ContinueToCartButtonSelector).Click();
+            _clickElementHelper.ClickElement(AddToCartButtonSelector);
+            _clickElementHelper.ClickElement(ContinueToCartButtonSelector);
         }
 
     }

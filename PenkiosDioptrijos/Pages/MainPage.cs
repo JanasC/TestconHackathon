@@ -1,18 +1,18 @@
-﻿using NUnit.Framework;
-using PenkiosDioptrijos;
-using OpenQA.Selenium;
-using System.Threading;
-using System;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using PenkiosDioptrijos.Helpers;
 
 namespace Test
 {
     public class MainPage
     {
         private IWebDriver Driver;
+        private ClickElementHelper _clickElementHelper;
+
         public MainPage(IWebDriver driver)
         {
             Driver = driver;
+            _clickElementHelper = new ClickElementHelper(driver);
         }
 
         public By SearchFieldSelector = By.CssSelector("input.twotabsearchtextbox");
@@ -32,7 +32,7 @@ namespace Test
 
         public void RunSearch()
         {
-            Driver.FindElement(SearchButtonSelector).Click();
+            _clickElementHelper.ClickElement(SearchButtonSelector);
         }
 
         public void ExecuteSearch(string category, string searchText)

@@ -6,7 +6,8 @@ using PenkiosDioptrijos.Helpers;
 namespace Test
 {
     [TestFixture]
-    public class UnitTests
+    [Parallelizable(ParallelScope.Self)]
+    public class PlayStation4Test
     {
         private TestBase testBase = new TestBase();
         private ClickElementHelper _clickElementHelper;
@@ -23,12 +24,6 @@ namespace Test
             _mainPage = new MainPage(driver);
             _loginPage = new LoginPage(driver);
             _searchResultsPage = new SearchResultsPage(driver);
-
-        }
-
-        [Test]
-        public void LoginToAmazonPage()
-        {
             _loginPage.LoginToAmazon();
         }
 
@@ -46,6 +41,7 @@ namespace Test
         [Ignore("For now")]
         public void AddToBasketPlayStation4()
         {
+            
         }
 
         [Test]

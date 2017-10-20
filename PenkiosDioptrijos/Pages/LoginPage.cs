@@ -1,17 +1,17 @@
-﻿using NUnit.Framework;
-using PenkiosDioptrijos;
-using OpenQA.Selenium;
-using System.Threading;
-using System;
+﻿using OpenQA.Selenium;
+using PenkiosDioptrijos.Helpers;
 
 namespace Test
 {
     public class LoginPage
     {
         private IWebDriver Driver;
+        private ClickElementHelper _clickElementHelper;
+
         public LoginPage(IWebDriver driver)
         {
             Driver = driver;
+            _clickElementHelper = new ClickElementHelper(driver);
         }
 
         public By LoginNameSelector = By.CssSelector("input#ap_email");

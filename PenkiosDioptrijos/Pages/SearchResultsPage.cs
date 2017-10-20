@@ -1,13 +1,17 @@
 ﻿using OpenQA.Selenium;
+using PenkiosDioptrijos.Helpers;
 
 namespace Test
 {
     public class SearchResultsPage
     {
         private IWebDriver Driver;
+        private ClickElementHelper _clickElementHelper;
+
         public SearchResultsPage(IWebDriver driver)
         {
             Driver = driver;
+            _clickElementHelper = new ClickElementHelper(driver);
         }
 
         public By SearchBarSelector = By.CssSelector("input.twotabsearchtextbox");
