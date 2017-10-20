@@ -15,7 +15,7 @@ namespace Test
             _clickElementHelper = new ClickElementHelper(driver);
         }
 
-        public By SearchFieldSelector = By.CssSelector("input.twotabsearchtextbox");
+        public By SearchFieldSelector = By.Id("twotabsearchtextbox");
         public By SearchDropdownBoxSelector = By.CssSelector("select#searchDropdownBox");
         public By SearchButtonSelector = By.CssSelector("div.nav-right input");
 
