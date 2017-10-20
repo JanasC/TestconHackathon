@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using static Test.TestLogger;
 
 namespace PenkiosDioptrijos
 {
@@ -18,6 +19,7 @@ namespace PenkiosDioptrijos
 
         public void CleanUp()
         {
+            LogMessage("Terminating Driver");
             Driver.Quit();
         }
     }
