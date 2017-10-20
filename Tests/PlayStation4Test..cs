@@ -38,6 +38,7 @@ namespace Test
             _mainPage.EnterSearch("PlayStation 4 pro console");
             _mainPage.RunSearch();
             _clickElementHelper.ClickElement(_searchResultsPage.Playstation4ConsoleSelector);
+            _clickElementHelper.ClickElement(_searchResultsPage.ShipToLithuaniaCheckBox);
             _clickElementHelper.ClickElement(_searchResultsPage.FourStarsAndUpButton);
             _clickElementHelper.ClickElement(_searchResultsPage.FreeShippingByAmazonCheckBox);
             _clickElementHelper.ClickElement(_searchResultsPage.IncludeOutofStock);
