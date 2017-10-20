@@ -1,8 +1,6 @@
 ﻿using NUnit.Framework;
 using PenkiosDioptrijos;
 using OpenQA.Selenium;
-using System.Threading;
-using System;
 using PenkiosDioptrijos.Helpers;
 
 namespace Test
@@ -35,11 +33,13 @@ namespace Test
         }
 
         [Test]
-        [Ignore("For now")]
         public void SearchForPlayStation4()
         {
             _mainPage.EnterSearch("PlayStation 4 pro console");
-
+            _clickElementHelper.ClickELement(_searchResultsPage.Playstation4ConsoleSelector);
+            _clickElementHelper.ClickELement(_searchResultsPage.FourStarsAndUpButton);
+            _clickElementHelper.ClickELement(_searchResultsPage.FreeShippingByAmazonCheckBox);
+            _clickElementHelper.ClickELement(_searchResultsPage.IncludeOutofStock);
         }
 
         [Test]
