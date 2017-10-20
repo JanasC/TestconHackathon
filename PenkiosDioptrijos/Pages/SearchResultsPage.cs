@@ -22,6 +22,7 @@ namespace Test
         public By FourStarsAndUpButton = By.XPath("//span[contains(.,'4 Stars & Up')]");
         public By IncludeOutofStock = By.XPath("//span[text()='Include Out of Stock']");
 
-        public By SelectFirstProductInTheListSelector = By.XPath("//h2[@data-attribute='PlayStation 4 Pro 1TB Console']/..");
+        public By SelectPlaystation4Selector = By.XPath("//h2[@data-attribute='PlayStation 4 Pro 1TB Console']/..");
+        public By SelectCamera = By.XPath("//h2[@data-attribute='PlayStation 4 Camera']/..");
     }
 }
