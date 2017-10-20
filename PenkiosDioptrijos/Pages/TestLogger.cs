@@ -10,9 +10,9 @@ namespace Test
 {
     public class TestLogger
     {
-        public TestLogger(string Message)
+        public void LogMessage(string Message)
         {
-            String TimeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+            String TimeStamp = DateTime.Now.ToString("u");
             TestContext.Write(TimeStamp + ": - " + Message);
 
 
