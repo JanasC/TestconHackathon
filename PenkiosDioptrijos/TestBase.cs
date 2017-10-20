@@ -29,7 +29,7 @@ namespace PenkiosDioptrijos
                     Driver = new FirefoxDriver();
                     break;
                 case "Chrome":
-                    Driver = new ChromeDriver("/Users/janaschatkevicius/Desktop/");
+                    Driver = new ChromeDriver();
                     break;
                 default:
                     break;
