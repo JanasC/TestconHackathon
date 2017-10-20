@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Threading;
 
 namespace PenkiosDioptrijos.Helpers
 {
@@ -12,6 +13,7 @@ namespace PenkiosDioptrijos.Helpers
 
         public void ClickElement(By by)
         {
+            Thread.Sleep(1500);
             Driver.FindElement(by).Click();
         }
     }

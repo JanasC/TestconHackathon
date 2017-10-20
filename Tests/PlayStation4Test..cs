@@ -2,6 +2,7 @@
 using PenkiosDioptrijos;
 using OpenQA.Selenium;
 using PenkiosDioptrijos.Helpers;
+using System.Threading;
 
 namespace Test
 {
@@ -41,7 +42,6 @@ namespace Test
             _clickElementHelper.ClickElement(_searchResultsPage.Playstation4ConsoleSelector);
             _clickElementHelper.ClickElement(_searchResultsPage.ShipToLithuaniaCheckBox);
             _clickElementHelper.ClickElement(_searchResultsPage.FourStarsAndUpButton);
-            _clickElementHelper.ClickElement(_searchResultsPage.FreeShippingByAmazonCheckBox);
             _clickElementHelper.ClickElement(_searchResultsPage.IncludeOutofStock);
         }
 
