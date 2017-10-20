@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using PenkiosDioptrijos.Helpers;
+using static Test.TestLogger;
 
 namespace Test
 {
@@ -19,7 +20,9 @@ namespace Test
 
         public void AddToCart()
         {
+            LogMessage("Adding to Cart Using: " + AddToCartButtonSelector);
             _clickElementHelper.ClickElement(AddToCartButtonSelector);
+            LogMessage("Clicking Button: " + ContinueToCartButtonSelector);
             _clickElementHelper.ClickElement(ContinueToCartButtonSelector);
         }
 

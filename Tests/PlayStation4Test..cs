@@ -46,15 +46,12 @@ namespace Test
         }
 
         [Test, Order(2)]
-
         public void SelectPlayStation4()
         {
             _clickElementHelper.ClickElement(_searchResultsPage.SelectFirstProductInTheListSelector);
         }
 
-
         [Test, Order(3)]
-
         public void AddToBasketPlayStation4()
         {
             _productPage.AddToCart();
@@ -68,7 +65,6 @@ namespace Test
             //_basketPage.DeliverToThisAdress();
             Thread.Sleep(9000);
         }
-
 
         [OneTimeTearDown]
         public void Clean()
