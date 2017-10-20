@@ -26,26 +26,31 @@ namespace Test
         }
 
         [Test]
-        public void TestMethod()
-        {
-            var inputElement = driver.FindElement(By.Id("lst-ib"));
-            Console.WriteLine("Finding elements...");
-            inputElement.SendKeys("Google");
-            inputElement.Submit();
-            Thread.Sleep(5000);
-        }
-
-        [Test]
         public void LoginToAmazonPage()
         {
             _loginPage.LoginToAmazon();
         }
 
         [Test]
+        [Ignore("For now")]
         public void SearchForPlayStation4()
         {
             _mainPage.EnterSearch("PlayStation 4 pro console");
+            _searchResultsPage.AddFiltersForPS4();
         }
+
+        [Test]
+        [Ignore("For now")]
+        public void AddToBasketPlayStation4()
+        {
+        }
+
+        [Test]
+        [Ignore("For now")]
+        public void PlaceOrderPlayStation4()
+        {
+        }
+
 
         [TearDown]
         public void Clean()
