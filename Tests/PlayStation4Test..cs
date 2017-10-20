@@ -19,7 +19,7 @@ namespace Test
         private ProductPage _productPage;
         private BasketPage _basketPage;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void TestInitialize()
         {
             driver = testBase.GetDriverInstance();
@@ -48,7 +48,7 @@ namespace Test
         [Test, Order(2)]
         public void SelectPlayStation4()
         {
-            _clickElementHelper.ClickElement(_searchResultsPage.PlaystationSelectionSelector);
+            _clickElementHelper.ClickElement(_searchResultsPage.SelectPlaystation4Selector);
         }
 
         [Test, Order(3)]
@@ -57,17 +57,19 @@ namespace Test
             _productPage.AddToCart();
         }
 
-        [Test, Order(4)]
-        public void PlaceOrderPlayStation4()
-        {
-            _basketPage.ProceedToCheckout();
-            _basketPage.CancelOfferPopUp();
-            _basketPage.DeliverToThisAdress();
-        }
+        //[Test, Order(4)]
+        //public void PlaceOrderPlayStation4()
+        //{
+            //_basketPage.ProceedToCheckout();
+            //_basketPage.CancelOfferPopUp();
+            //_basketPage.DeliverToThisAdress();
+            //Thread.Sleep(9000);
+        //}
 
         [OneTimeTearDown]
         public void Clean()
         {
+            
             testBase.CleanUp();
         }
     }

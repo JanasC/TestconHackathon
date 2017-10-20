@@ -4,17 +4,20 @@ using System;
 using System.Drawing.Imaging;
 using System.IO;
 using static Test.TestLogger;
+using OpenQA.Selenium.Firefox;
+using System.Configuration;
 
 namespace PenkiosDioptrijos
 {
     public class TestBase
     {
-        
-        private readonly IWebDriver Driver = new ChromeDriver();
+        private IWebDriver Driver;
+
         public IWebDriver GetDriverInstance()
         {
+            Driver = GetNewDriverInstance();
             Driver.Manage().Window.Maximize();
-            Driver.Navigate().GoToUrl("https://www.amazon.com/account");
+            Driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["DefaultURL"]);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
             return Driver;
         }
@@ -35,6 +38,26 @@ namespace PenkiosDioptrijos
             screenshot.SaveAsFile(dir + currentDate + "Screenshot" + ".png", ScreenshotImageFormat.Png);
         }
        
+        public IWebDriver GetNewDriverInstance()
+        {
+            
+            string browser = ConfigurationManager.AppSettings["Browser"];
+            switch (browser)
+            {
+                case "Firefox":
+                    FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
+                    service.FirefoxBinaryPath = ConfigurationManager.AppSettings["FireFoxBinary"];
+                    Driver = new FirefoxDriver(service);
+                    break;
+                case "Chrome":
+                    Driver = new ChromeDriver();
+                    break;
+                default:
+                    break;
+            }
+            return Driver;
+        }
+
         public void CleanUp()
         {
             TakeScreenShot();

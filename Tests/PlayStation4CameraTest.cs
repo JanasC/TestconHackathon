@@ -2,6 +2,7 @@
 using PenkiosDioptrijos;
 using OpenQA.Selenium;
 using PenkiosDioptrijos.Helpers;
+using System.Threading;
 
 namespace Test
 {
@@ -34,7 +35,7 @@ namespace Test
         private ProductPage _productPage;
         private BasketPage _basketPage;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void TestInitialize()
         {
             driver = testBase.GetDriverInstance();
@@ -55,25 +56,31 @@ namespace Test
             _mainPage.EnterSearch("PlayStation 4 camera");
             _mainPage.RunSearch();
             _clickElementHelper.ClickElement(_searchResultsPage.ShipToLithuaniaCheckBox);
-            _clickElementHelper.ClickElement(_searchResultsPage.IncludeOutofStock);
         }
 
         [Test, Order(2)]
-        public void AddToBasketCamera()
+        public void SelectCamera()
         {
-            _productPage.AddToCart();
+            _clickElementHelper.ClickElement(_searchResultsPage.SelectCamera);
         }
 
+       [Test, Order(3)]
+       public void AddToBasketCamera()
+       {
+           _productPage.AddToCart();
+       }
+
         [Test, Order(3)]
-        public void PlaceOrderCamera()
+        public void PlaceOrder()
         {
             _basketPage.ProceedToCheckout();
             _basketPage.CancelOfferPopUp();
-            _basketPage.DeliverToThisAdress();
+            //_basketPage.DeliverToThisAdress();
+            Thread.Sleep(5000);
         }
 
 
-        [TearDown]
+        [OneTimeTearDown]
         public void Clean()
         {
             testBase.CleanUp();
