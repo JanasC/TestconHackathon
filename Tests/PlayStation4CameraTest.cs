@@ -59,14 +59,12 @@ namespace Test
         }
 
         [Test, Order(2)]
-        [Ignore("For now")]
         public void AddToBasketCamera()
         {
             _productPage.AddToCart();
         }
 
         [Test, Order(3)]
-        [Ignore("For now")]
         public void PlaceOrderCamera()
         {
             _basketPage.ProceedToCheckout();
