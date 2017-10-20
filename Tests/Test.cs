@@ -3,6 +3,7 @@ using PenkiosDioptrijos;
 using OpenQA.Selenium;
 using System.Threading;
 using System;
+using PenkiosDioptrijos.Helpers;
 
 namespace Test
 {
@@ -10,6 +11,7 @@ namespace Test
     public class UnitTests
     {
         private TestBase testBase = new TestBase();
+        private Click
         private IWebDriver driver;
         private MainPage _mainPage;
         private LoginPage _loginPage;
@@ -19,10 +21,11 @@ namespace Test
         public void TestInitialize()
         {
             driver = testBase.GetDriverInstance();
-            Console.WriteLine("Instance opened...");
+
             _mainPage = new MainPage(driver);
             _loginPage = new LoginPage(driver);
             _searchResultsPage = new SearchResultsPage(driver);
+
         }
 
         [Test]
@@ -36,7 +39,8 @@ namespace Test
         public void SearchForPlayStation4()
         {
             _mainPage.EnterSearch("PlayStation 4 pro console");
-            _searchResultsPage.AddFiltersForPS4();
+            _searchResultsPage.ClickELement();
+
         }
 
         [Test]
