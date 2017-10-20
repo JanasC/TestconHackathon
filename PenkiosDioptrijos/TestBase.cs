@@ -27,7 +27,7 @@ namespace PenkiosDioptrijos
             {
                 case "Firefox":
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
-                    service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+                    service.FirefoxBinaryPath = ConfigurationManager.AppSettings["FireFoxBinary"];
                     Driver = new FirefoxDriver(service);
                     break;
                 case "Chrome":
