@@ -14,14 +14,13 @@ namespace Test
             Driver = driver;
         }
 
-        public By SearchFieldSelector = By.CssSelector("input.twotabsearchtextbox");
-        public By SearchDropdownBoxSelector = By.CssSelector("select#searchDropdownBox");
-        public By SearchButtonSelector = By.CssSelector("div.nav-right input");
+        public By LoginNameSelector = By.CssSelector("input#ap_email");
+        public By PasswordSelector = By.CssSelector("input#ap_password");
 
         public void LoginToAmazon()
         {
-            var Loginname = Driver.FindElement(By.XPath("//input[@id='ap_email']"));
-            var Password = Driver.FindElement(By.XPath("//input[@id='ap_password']"));
+            var Loginname = Driver.FindElement(LoginNameSelector);
+            var Password = Driver.FindElement(PasswordSelector);
             Console.WriteLine("Finding elements...");
             Loginname.SendKeys("5dhackaton@gmail.com");
             Password.SendKeys("Q!w2e3r4123");

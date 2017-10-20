@@ -35,5 +35,12 @@ namespace Test
             Driver.FindElement(SearchButtonSelector).Click();
         }
 
+        public void ExecuteSearch(string category, string searchText)
+        {
+            SelectCategory(category);
+            EnterSearch(searchText);
+            RunSearch();
+        }
+
     }
 }
