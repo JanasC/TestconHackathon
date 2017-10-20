@@ -23,6 +23,8 @@ namespace Tests
          *  
          *  Select item which have Amazon`s Choice
          *  //span[@class='a-badge-text' and contains(text(),'Amazon')]/../../../../../../../..
+         * 
+         * !!!!Save to variables price and delivery date!!!!
          */
 
     }
