@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NUnit.Framework;
 
 namespace Tests
 {
-    class JustDance2018
+    [TestFixture]
+    [Parallelizable(ParallelScope.Self)]
+    class PlayStation4JustDance2018Test
     {
 
         /* Search: 'Just Dance 2018 - PS4'

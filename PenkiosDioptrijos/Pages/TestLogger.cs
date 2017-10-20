@@ -10,10 +10,10 @@ namespace Test
 {
     public class TestLogger
     {
-        public TestLogger(string driver)
+        public TestLogger(string Message)
         {
-            //String TimeStamp = ToString.DateTime.Now();
-            //TestContext.Write()
+            String TimeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+            TestContext.Write(TimeStamp + ": - " + Message);
 
 
         }
