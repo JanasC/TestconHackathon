@@ -26,7 +26,9 @@ namespace PenkiosDioptrijos
             switch (browser)
             {
                 case "Firefox":
-                    Driver = new FirefoxDriver();
+                    FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
+                    service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+                    Driver = new FirefoxDriver(service);
                     break;
                 case "Chrome":
                     Driver = new ChromeDriver();
