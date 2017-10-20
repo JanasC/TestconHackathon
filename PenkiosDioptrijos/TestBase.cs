@@ -6,6 +6,7 @@ namespace PenkiosDioptrijos
 {
     public class TestBase
     {
+        
         private readonly IWebDriver Driver = new ChromeDriver();
         public IWebDriver GetDriverInstance()
         {
