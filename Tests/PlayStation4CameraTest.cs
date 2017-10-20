@@ -3,7 +3,7 @@ using PenkiosDioptrijos;
 using OpenQA.Selenium;
 using PenkiosDioptrijos.Helpers;
 
-namespace Tests
+namespace Test
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Self)]
