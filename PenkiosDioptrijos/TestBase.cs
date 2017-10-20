@@ -10,7 +10,7 @@ namespace PenkiosDioptrijos
         public IWebDriver GetDriverInstance()
         {
             Driver.Manage().Window.Maximize();
-            Driver.Navigate().GoToUrl("http://www.google.com");
+            Driver.Navigate().GoToUrl("https://www.amazon.com/account");
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             return Driver;
         }

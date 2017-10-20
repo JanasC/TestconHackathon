@@ -12,6 +12,7 @@ namespace Test
         private TestBase testBase = new TestBase();
         private IWebDriver driver;
         private MainPage _mainPage;
+        private LoginPage _loginPage;
 
         [SetUp]
         public void TestInitialize()
@@ -19,6 +20,7 @@ namespace Test
             driver = testBase.GetDriverInstance();
             Console.WriteLine("Instance opened...");
             _mainPage = new MainPage(driver);
+            _loginPage = new LoginPage(driver);
         }
 
         [Test]
@@ -29,6 +31,11 @@ namespace Test
             inputElement.SendKeys("Google");
             inputElement.Submit();
             Thread.Sleep(5000);
+        }
+        [Test]
+        public void LoginPage()
+        {
+            _loginPage.LoginToAmazon();
         }
 
         [TearDown]
