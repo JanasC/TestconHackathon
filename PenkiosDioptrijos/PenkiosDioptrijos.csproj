@@ -39,6 +39,7 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\ClickElementHelper.cs" />
@@ -54,6 +55,7 @@
   <ItemGroup>
     <None Include="chromedriver" />
     <None Include="packages.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="chromedriver.exe">
