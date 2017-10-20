@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using PenkiosDioptrijos.Helpers;
 using System;
 
 namespace Test
@@ -6,9 +7,12 @@ namespace Test
     public class BasketPage
     {
         private IWebDriver Driver;
+        private ClickElementHelper _clickElementHelper;
+
         public BasketPage(IWebDriver driver)
         {
             Driver = driver;
+            _clickElementHelper = new ClickElementHelper(driver);
         }
 
         public By ProceedToCheckoutButtonSelector = By.CssSelector("input.a-button-input[name=proceedToCheckout]");
@@ -17,14 +21,14 @@ namespace Test
 
         public void ProceedToCheckout()
         {
-            Driver.FindElement(ProceedToCheckoutButtonSelector).Click();
+            _clickElementHelper.ClickElement(ProceedToCheckoutButtonSelector);
         }
 
         public void CancelOfferPopUp()
         {
             try
             {
-                Driver.FindElement(NoThanksButtonSelector).Click();
+                _clickElementHelper.ClickElement(NoThanksButtonSelector);
             }
             catch (NoSuchElementException)
             {
